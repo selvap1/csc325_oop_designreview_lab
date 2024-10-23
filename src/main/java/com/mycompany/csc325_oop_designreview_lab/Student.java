@@ -8,12 +8,27 @@ package com.mycompany.csc325_oop_designreview_lab;
  *
  * @author MoaathAlrajab
  */
-public class Student {
-	// ToDo 1: Make this class a child of Human
+public class Student extends Human {
+    protected int credits;
+    protected double gpa;
 
-	// ToDo 2: Fix the resulting errors
+    public Student(String name, int age, String address, int credits, double gpa) {
+        super(name, age, address);
+        this.credits = credits;
+        this.gpa = gpa;
+    }
 
-	// ToDo 3: Add a field for GPA and create a setter and a getter
-	
-	// ToDo 4: Add comments to your code
+    // Getters
+    public int getCredits() {
+        return credits;
+    }
+
+    public double getGPA() {
+        return gpa;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{name=" + name + ", age=" + age + ", address=" + address + ", credits=" + credits + ", GPA=" + gpa + "}";
+    }
 }
